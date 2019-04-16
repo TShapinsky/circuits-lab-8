@@ -14,5 +14,5 @@ with open(sys.argv[1]) as f:
       ys += [float(row[1])] 
 
 
-plt.plot(xs, ys)
+plt.plot(xs, ys, '.')
 plt.show()
