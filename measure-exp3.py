@@ -9,8 +9,8 @@ v = np.linspace(0, 5, 1000)
 
 # vb = 0.559v -> ib = 1μA
 # vb = 1.085 -> ib =  99.8μA
-filename = "data/exp3_vb=1.085.csv"
-measuring = "Vout"
+filename = "data/exp3_direct_vb=1.085.csv"
+measuring = "Vout-Vin"
 
 f = open(filename, 'w')
 f.write("Vout, {!s}\n".format(measuring))
