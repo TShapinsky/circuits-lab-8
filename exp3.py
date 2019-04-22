@@ -47,7 +47,7 @@ Vout_t = np.array(Vin_fit)*fit[0] + fit[1]
 # Plot things
 fig = plt.figure(figsize=(8,6))
 ax = plt.subplot(111)
-ax.plot(Vin, Vout, 'g.', markersize=4, label="Voltage transfer characteristic")
+ax.plot(Vin, Vout, 'g.', markersize=4, label="Voltage transfer characteristic (Vout)")
 ax.plot(Vin_fit, Vout_t, 'r-', linewidth=1, label="Linear fit (slope = %g" % fit[0])
 
 plt.title("Unity-gain follower voltage transfer characteristic")
@@ -73,7 +73,7 @@ with open("data/exp3_direct_vb=1.085.csv") as f:
     Vdiff += [float(row[1])]
 
 # Plot things
-ax.plot(Vin, Vdiff, 'g.', markersize=4, label="Offset voltage")
+ax.plot(Vin, Vdiff, 'g.', markersize=4, label="Offset voltage (Vout - Vin)")
 
 plt.title("Unity-gain follower offset voltage characteristic")
 plt.xlabel("Input voltage (V)")
